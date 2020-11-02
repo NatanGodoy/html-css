@@ -1,0 +1,2 @@
+Aula mostrando a diferença entre HTML4 e HTML5 
+basicamente html5 foca na semantica das coisas enquanto o 4 foca na forma.
