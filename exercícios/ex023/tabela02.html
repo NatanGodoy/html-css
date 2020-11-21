@@ -6,55 +6,106 @@
     <title>Tabelas</title>
 
     <style>
-      
-        table {
-            border: 1px solid black;
+        
+        body {
+            font-family:Arial, Helvetica, sans-serif;
         }
-        
-        
+
+        table {
+            width: 600px;
+            
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+
+        caption {
+            font-weight: bolder;
+            font-size: 1.5em;
+            text-align: center;
+            background-color: rgb(236,236, 236);
+            padding: 5px;
+        }
+
         thead {
-            background-color: black;
+            background-color: #636363;
             color: white;
-        
+            text-align: left;
+        }
+
+
+        td, th {
+            border:1px solid black;
+            padding:5px;
+            
         }
 
         
+        tbody > tr:nth-child(even) {
+            background-color: #dddddd;
+
+        }
+        
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        
+        
+        tfoot{
+            background-color: #636363;
+            color: white;
+            font-weight: bolder;
+        }
+
+        tfoot th {
+            text-align: left;
+        }
+
+
+
 
     </style>
-
-
-
 
 </head>
 <body>
     <table>
-        <thead>
-            <tr> <!--Linhas da tabela (table row)-->
-                <th>Grupo</th>
-                <th>Nomes</th>
-                <th colspan="3">Favorites Movie</th>
-            </tr>
+        <caption>
+            <p>População das Unidades Federativas</p> <!--TÍTULO DA TABELA-->    
+        </caption>   
+        
+        <thead> 
+            <!--Cabeçalho da tabela-->
+            <th scope="col">Cidade</th>
+            <th scope="col">População</th> 
+        
         </thead>
-
-        <body>
-            <tr>
-                <td rowspan="3">Mulheres</td>
-                <td>Alexia Sander</td>
-                <td>Avengers</td>
-                <td>Frozen</td>
-                <td>Potter</td>
+            
+        <tbody> <!--CORPO DA TABELA-->
+            
+            <tr> <!--PRIMEIRA LINHA-->
+                <td>São Paulo</td> <!--PRIMEIRA CÉLULA DA PRIMEIRA LINHA-->
+                <td>45.919.049</td><!--SEGUNDA CÉLULA DA PRIMEIRA LINHA-->
+            </tr>
+        
+            <tr> <!--SEGUNDA LINHA-->
+                <td>Minas Gerais</td> <!--PRIMEIRA CÉLULA DA SEGUNDA LINHA-->
+                <td>21.168.791</td><!--SEGUNDA CÉLULA DA SEGUNDA LINHA-->
             </tr>
 
+            
+            
+        
+        </tbody>
+
+        <tfoot>
+            <!--RODAPÉ DA TABELA-->
             <tr>
-                <td>Aline Santos</td>
-                <td>Hulk</td>
-                <td>Inception</td>
-                <td>Batman</td>
+                <th scope="row">Total</th>
+                <td>110.659.804</td>
             </tr>
-        </body>
-
-
-
+        
+        </tfoot>
     </table>
+
 </body>
 </html>
